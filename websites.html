@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="utf-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <title>Elizabeth Bank | Web Developer and Graphic Artist</title>
+     <meta name="description" content="Recent web design work, both direct HTML/CSS and theme development on the Wordpress CMS." />
+     <meta name="keywords" content="graphics, artist, art, digital, web, design, development, developer, front-end, website" />
+     <meta name="viewport" content="width=device-width, initial-scale=1" />
+     <link rel="stylesheet" href="css/main.css" />
+     <link href="https://fonts.googleapis.com/css?family=Muli|Princess+Sofia" rel="stylesheet" />
+     <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+     
+     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+     <script src="js/scripts.js"></script>
+     
+</head>
+
+<body>
+     <nav id="navbar" role="navigation">
+          <a href="index.html">
+               <img id="logo" src="images/lizlogowhite.png" width="100" height="100" alt="logo">
+          </a>
+          <ul>
+               <li><a href="index.html#top">Home</a></li>
+               <li><a href="index.html#portfolio">Portfolio</a></li>
+               <li><a href="index.html#about">About</a></li>
+               <li><a href="index.html#contact">Contact</a></li>
+          </ul>     
+     </nav>
+     <main class="pageStart">
+               <h2 class="pageTitle">Websites</h2>
+     <section class="gallery" id="lightboxContainer">
+          <div><img id="pic1" src="images/oenophilemockup.png" alt="Wordpress custom theme for a wine blog" onclick="modalOpen(1)"><br>
+               <p class="liveLink"><a href="http://www.randomoenophile.com">See the live site</a></p></div>
+          <div><img id="pic2" src="images/finalmockup.png" alt="Website design for a fictional Taekwondo studio" onclick="modalOpen(2)"><br>
+          <p class="liveLink"><a href="http://gtc.elizabethmbank.info/1510/final/index.html" class="liveLink">See the live site</a></p></div>
+          <div><img id="pic3" src="images/grwmockup.png" alt="Wordpress custom theme for a non-profit trade organization" onclick="modalOpen(3)"><br>
+          <p class="liveLink"><a href="http://www.georgiaromancewriters.org" class="liveLink">See the live site</a></p></div>
+          <div><img id="pic4" src="images/cdominicmockup.png" alt="Wordpress custom theme for an author" onclick="modalOpen(4)"><br>
+          <p class="liveLink"><a href="http://www.ceciliadominic.com" class="liveLink">See the live site</a></p></div>
+          
+          <div id="modalWindow"> 
+                    <h3 id="closeIcon" onclick="modalClose()">x</h3>
+                    
+                    <div id="modalImages"><!--JS will put images here--></div>
+
+                    <div id="captionTxt"><!-- JS will put caption here --></div>
+          
+               
+          </div>
+          
+
+     </section>
+
+     <footer>
+               <section class="footerMenu">
+                         <ul>
+                              <li><a href="index.html#top">Home</a></li>
+                              <li><a href="index.html#portfolio">Portfolio</a></li>
+                              <li><a href="index.html#about">About</a></li>
+                              <li><a href="index.html#contact">Contact</a></li>
+                         </ul>     
+                    </section>
+                    <section class="footerSocial">
+                              <a href="https://www.linkedin.com/in/elizabeth-bank-978b217a/" id="linkedinFooter" class="socFoot">LinkedIn</a>
+                              <a href="https://twitter.com/selestieleweb" id="twitterFooter" class="socFoot">Twitter
+                              </a>
+                              <a href="https://www.instagram.com/lizbankdesign/" id="instagramFooter" class="socFoot">Instagram
+                              </a>
+                              <a href="https://codepen.io/ebank4336/" id="codepenFooter" class="socFoot">CodePen</a>
+                              <a href="https://github.com/selestiele" id="githubFooter" class="socFoot">GitHub</a>
+                              <a href="https://ladyartemis78.deviantart.com/" id="DAFooter" class="socFoot">DeviantArt</a>
+                              <a href="https://www.behance.net/selestiele6469" id="behanceFooter" class="socFoot">Behance</a>
+                              
+                    </section>
+               <h6><a href="tel:6786711082">Phone: 678-671-1082</a></h6>
+               <h6><a href="mailto:admin@elizabethmbank.info">admin@elizabethmbank.info</a></h6>
+               <h6>&copy; Elizabeth Bank</h6>
+          </footer>
+     </main>
+     <script src="js/scripts.js"></script>
+     
+     </body>
+     </html>
