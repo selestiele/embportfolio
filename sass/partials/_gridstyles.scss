@@ -1,0 +1,239 @@
+@supports (display: grid) {
+     @media screen and (min-width: 920px) {
+
+          /* General styles for larger screens */
+          .fullCover {
+               background: url("../images/duotone.jpg") fixed no-repeat;
+               background-size: cover;
+          }
+          
+          h1 {font-size: 3em;}
+          h2 {font-size: 2.5em;}
+          h3 {font-size: 2em;}
+          h4 {font-size: 1.8em;}
+          p {font-size: 1.25em;}
+
+          a {
+               font-size: 1em;
+          }
+
+          li {
+               font-size: 1.25em;
+          }
+
+          input, textarea {
+               padding: .5em;
+          }
+
+          .btn {
+               font-size: 1.25em;
+          }
+
+          .backUp {
+               font-size: 1.25em;
+          }
+
+                    
+          
+          /* Portfolio Section */
+          #portfolio {
+                              
+               .sectionStart {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-gap: 2em;
+                                        
+                    h2 {
+                         grid-column: 1 / 3;
+                    }
+               }
+
+               
+          }
+          
+          #webBtn {
+               grid-column: 1 / 2;
+               grid-row-start: 2;
+          } 
+
+          #graphicBtn {
+               grid-column: 2 / 2;
+               grid-row-start: 2;
+          }
+
+          .webExamples {
+               grid-column: 1 / 2;
+               grid-row-start: 3;
+          }
+
+          .graphicExamples {
+               grid-column: 2 / 2;
+               grid-row-start: 3;
+          }
+
+          .featured {
+               font-size: 1.25em;
+
+               figcaption {
+                    font-size: 1.25em;
+               }
+          }
+
+          .examples {
+               figcaption {
+                    font-size: 1.25em;
+               }
+          }
+
+
+          /* About Section */
+          
+          #aboutMe {
+               display: grid;
+               grid-template-columns: 1fr 1fr;
+
+               #p1 {
+                    grid-column-start: 2;
+                    grid-auto-flow: row;
+               }
+
+               #p2, #p3 {
+                    grid-column-start: 1;
+                    grid-column-end: 3;
+               }
+          }
+
+
+          .border {
+               max-width: 90%;
+               grid-column-start: 1;
+               grid-row-start: 1;
+          }
+
+          
+          #resume {
+               display: grid;
+               grid-template-columns: 1fr 1fr;
+
+               h3 {
+                    grid-column: 1 / 3;        
+               }
+          }
+
+          #computerSkills {
+               grid-column-start: 1;
+               grid-row-start: 2; 
+               grid-row-end: 4;
+               padding-right: 1em;
+          }
+
+          #interpersonalSkills {
+               grid-column-start: 2;
+               grid-row-start: 2;
+               padding-left: 1em;
+          }
+
+          #otherSkills {
+               grid-column-start: 2;
+               grid-row-start: 3;
+               padding-left: 1em;
+               
+          }
+
+          #resumeLink {
+               grid-column-start: 1;
+               grid-column-end: 3;
+               grid-row-start: 4;
+               max-width: 50%;
+               margin: 1.5em auto;
+          }
+               
+
+          /* Contact page */
+          #contact {
+               display: grid;
+               grid-template-columns: 60% 40%;
+               grid-template-areas: 
+                    "heading heading" "description description" 
+                    "form info" 
+                    "foot .";
+                              
+               h2{
+                    grid-area: heading;
+               }
+
+               p {
+                    grid-area: description;
+                    margin-bottom: 0;
+               }
+
+               form {
+                    grid-area: form;
+                    padding: 0 1em;
+                    margin-right: 1em;
+                    margin-top: 1em;
+
+               .backUp {
+                    grid-area: foot;
+               }
+
+               }
+          }
+
+          #contactMe {
+               grid-area: info;
+               padding: 0 1em;
+               margin-left: 1em;
+               margin-top: 1em;
+          }
+
+          /* Graphics and Websites pages  */
+          .gallery {
+               display: grid;
+               grid-template-columns: 1fr 1fr;
+               text-align: center;
+               grid-auto-flow: row;
+
+               img {
+                    margin: 1em auto;
+               }
+
+          }
+          
+          #modalImages {
+               margin: 0 auto;
+          }
+          
+          
+          /*  Cases Page */
+
+          .cases {
+               display: grid;
+               grid-template-columns: 1fr 1fr;
+               grid-auto-flow: row;
+
+               .pageTitle {
+                    grid-column: 1 / 3;
+               }
+
+               .process {
+                    grid-column: 1 / 3;
+               }
+          }
+
+     
+
+
+
+
+     } //end media query
+
+     @media screen and (min-width: 1200px) {
+          .border {
+               max-width: 420px;
+               max-height: 405px;
+          }
+     }
+
+
+} //end feature query

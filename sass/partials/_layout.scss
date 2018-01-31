@@ -1,0 +1,617 @@
+//This is the main layout file. It is mobile first, and builds as the screen gets larger.
+
+@import '_variables';
+@import '_mixins';
+
+
+/*  ---------------- background for all pages  ---------------- */
+body {
+      background-color: black;
+      color: white;
+}
+
+
+/*  ---------------- background image for home, about, and contact pages ----------------  */
+
+//background image for mobile devices
+@media screen and (max-width: 500px) {
+      .fullCover {
+            background: url("../images/duotone_mobile.jpg") fixed no-repeat;
+            background-size: cover;
+       }
+}
+
+//background image for mobile devices
+@media screen and (max-width: 920px) {
+      .fullCover {
+            background: url("../images/duotone_tablet.jpg") fixed no-repeat;
+            background-size: cover;
+      }
+}
+
+
+// mobile font sizes
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li {
+     color: white;
+     font-family: $mainFont;
+     font-weight: 300;
+}
+
+h1 {
+     font-family: $scriptFont;
+     font-size: 2.5em;
+     font-weight: 300;
+}
+
+h2 {font-size: 2em;}
+
+h3 {font-size: 1.75em;}
+
+h4 {font-size: 1.5em;}
+
+h5 {font-size: 1.25em;}
+
+h6 {font-size: .8em;}
+
+p {
+      font-size: 1em;
+      line-height: 1.6em;
+      margin-bottom: 2em;
+}
+
+
+
+// default link settings
+
+a {
+     color: white;
+     text-decoration: none;
+     border-bottom: 1px solid white;
+     
+
+     &:hover,
+     &:focus {
+          color: $teal;
+          border-bottom: 1px dotted $teal;
+     }
+
+     &:active {
+          border-bottom: 1px solid $teal;
+     }
+}
+
+
+/*  ---------------- navigation  ---------------- */
+#navbar {
+     position: fixed;
+     top: 0;
+     width: 100%;
+     background-color: rgba($bluergb, .8);
+     padding: 0 .5em;
+
+    #logo {
+          width: 4em;
+          height: 4em;
+          position: absolute;
+          top: 1em;
+          left: 1em;
+          z-index: 1;
+          
+          &:hover,
+          &:focus {
+                border: 1px solid $teal;
+            }
+      }
+
+    ul {
+          position: relative;
+          top: 0;
+          right: 0;
+          text-align: right;
+          padding-right: .5em;
+          padding: .5em;
+     }
+
+     li {
+          display: block;
+          list-style-type: none;
+          
+          a {
+               text-transform: uppercase;
+               text-decoration: none;
+               color: white;
+               border: 0;
+               
+
+               &:hover,
+               &:focus {
+                    color: $teal;
+                    border-bottom: 1px dotted $teal;
+               }
+
+               &:active {
+                    border-bottom: 1px dotted $teal;
+               }
+          }
+     }
+}
+
+.hide-nav {
+      visibility: hidden;
+      transition: top 1s ease-in;
+      -webkit-transition: top 1s ease-in;
+}
+
+/*  ---------------- links that look like buttons ----------------  */
+
+.btn {
+     display: inline-block;
+     background: transparent;
+     border: 2px solid white;
+     padding: .5em;
+     width: 100%;
+     margin: .5em auto;
+     text-align: center;
+
+     &:hover {
+           background: $teal;
+           color: black;
+           border: 2px solid white;
+     }
+}
+
+/*  ---------------- Back to top buttons ----------------  */
+
+     .backUp {
+          color: white;
+          padding: 0;
+          margin: 1em .5em 1em 0;
+          text-align: left;
+          border: 0;
+          text-transform: uppercase;
+
+          &::before {
+            font-family: $iconfa;
+            color: white;
+            font-size: 1.5em;
+            content: "\f01b";
+            margin-right: .25em;
+          }
+            
+          &:hover::before {
+            color: $teal;
+          }
+     }
+
+      
+
+/*  ---------------- home section  ---------------- */
+
+#title {
+     height: 100vh;
+     width: 95%;
+     padding: 13em 0;
+     text-align: center;
+     margin: 0 auto;
+          
+     h3 {
+         letter-spacing: .1em;
+     }
+}
+
+
+/*  ---------------- Other sections ----------------  */
+
+.sectionStart {
+     width: 80%;
+     margin: 0 auto;
+     padding: 0 1em;
+}
+
+
+.heading {
+     padding-top: 5em;
+     border-bottom: 2px solid white;
+     margin-bottom: .5em;
+ 
+}
+
+/*  ---------------- portfolio page  ---------------- */
+#portfolio {
+     background-color: black;
+     width: 100vw;
+}
+
+.featured {
+     display: block;
+     border: 2px solid $teal;
+     padding: .25em;
+     width: 100%;
+     margin: .5em auto;
+
+     h3 {
+          font-size: 1.25em;
+          margin-bottom: .25em;
+     }
+
+     h4 {
+          font-size: 1.1em;
+          color: $teal;
+          margin-bottom: .5em;
+          text-transform: none;
+          padding: .5em;
+          text-align: center;
+
+          &:hover {
+            border: 1px dotted white;
+          }
+     }
+
+     figure {
+          border: 2px solid white;
+          width: 95%;
+          margin: 0 auto 1em;
+          padding: .25em;
+          text-align: center;
+     }
+
+     img {
+          width: 95%;
+     }
+
+     figcaption {
+          @include figcaption;   
+     }
+}
+
+.description {
+     padding: 0 .5em;
+}
+
+.examples {
+     margin: 1em 0;
+     border: 2px solid white;
+     text-align: center;
+     
+     img {
+          width: 95%;
+          padding: .5em;
+     }
+
+     figcaption {
+          @include figcaption;
+          color: white; 
+     }
+     
+}
+
+
+
+/*  ---------------- About page  ---------------- */
+
+#about {
+     
+      img {
+          width: 90%;
+          margin: .25em;
+     }
+     
+}
+
+.border {
+      background-color: $teal;
+      text-align: center;
+      max-width: 50%;
+      margin-bottom: .5em;
+            
+}
+
+.clip {
+      //message shaped clip path
+      -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 30% 75%, 0% 75%);
+      clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 30% 75%, 0% 75%)
+      /* L-shaped clip path: 
+      -webkit-clip-path: polygon(0% 0%, 50% 0, 50% 60%, 100% 60%, 100% 100%, 0% 100%);
+      clip-path: polygon(0% 0%, 50% 0, 50% 60%, 100% 60%, 100% 100%, 0% 100%); */
+}
+
+#resume {
+     h3 {
+          border-bottom: 1px solid white;
+          margin: .25em;
+          padding: .25em;
+          text-align: center;
+     }
+
+     h4 {
+          @extend h3;
+          text-align: left;
+          font-size: 1.25em;
+          text-shadow: black 3px 3px 2px;
+     }
+
+     li {
+          list-style-type: none;
+     }
+
+     .btn {
+            background-color: white;
+            color: $darkblue;
+            font-weight: 700;
+            letter-spacing: .15em;
+            box-shadow: 2px 2px 3px black;
+            width: 50%;
+     }
+}
+
+/* ----------------  Contact Page  ---------------- */
+
+#contactMe {
+      clear: both;
+      background-color: black;    
+      color: white;
+      padding: 1em;
+      margin-bottom: 1em;
+           
+      a {
+            border: 0;
+      }
+}
+
+.contactHeader {
+      font-size: 1.25em;
+      text-transform: uppercase;
+      color: $teal;
+      margin: .5em 0 .25em;
+}
+
+.contactInfo {
+      font-size: 1em;
+      padding-left: .5em;
+      padding-bottom: .5em;
+      border-bottom: 1px solid #666666;
+      
+      a {
+            display: block;
+
+            &:hover {
+                  text-decoration: underline;
+            }
+      }
+}
+
+form {
+      margin: 1em 0;
+      display: block;
+
+      #submitForm {
+            clear: both;
+            float: right;
+            background-color: white;
+            color: $darkblue;
+            border: 4px solid $darkblue;
+            display: block;
+            margin: 1em 0;
+            padding: .5em;
+            width: 30%;
+
+            &:hover {
+                  background-color: $darkblue;
+                  color: white;
+            }
+      }
+}
+
+label {
+      font-size: 1.25em;
+}
+
+input, 
+textarea {
+      margin: .25em 0 1em;
+      width: 100%;
+      background-color: $lightgray;
+      color: black;
+      border: 0;
+}
+
+
+
+
+
+/*  ---------------- Footer  ---------------- */
+ footer {
+      text-align: center;
+      border-top: 1px solid white;
+      margin-top: 2em;
+
+      a {
+            border: 0;
+      }
+ }
+
+ .footerMenu {
+       ul {
+             text-align: center;
+             margin: 1em auto;
+             padding: 0;
+       }
+
+       li {
+             list-style-type: none;
+             display: inline;
+             padding: .5em;
+       }
+
+ }
+
+ .footerSocial {
+      font-family: "FontAwesome";
+      font-size: 1.25em;
+      margin: .5em auto;
+      width: 50%;
+
+ }
+
+ .socFoot {
+      width: 1.5em;
+      margin: .5em;
+      display: inline-block;
+      height: 1em;
+      overflow: hidden;
+      
+ }
+
+ .socFoot::before {
+       display: inline-block;
+ }
+
+ #behanceFooter::before {
+       content: "\f1b4";
+ }
+
+ #DAFooter::before {
+       content: "\f1bd";
+ }
+
+ #twitterFooter::before {
+       content: "\f099";
+       
+ }
+
+ #instagramFooter::before {
+       content: "\f16d";
+ }
+
+ #wpFooter::before {
+       content: "\f19a";
+ }
+
+ #githubFooter::before {
+      content: "\f09b";
+ }
+
+ #codepenFooter::before {
+       content: "\f1cb";
+ }
+
+ #linkedinFooter::before {
+       content: "\f0e1";
+ }
+
+
+
+/*  ---------------- Other Pages  ---------------- */
+.pageStart {
+      margin: 7em auto 1em;
+      width: 80%;
+}
+
+.pageTitle {
+      text-align: center;
+}
+
+
+
+
+/* ---------------- Cases Page ---------------- */
+.cases {
+      margin: 1em 0;
+      width: 100%;
+      text-align: center;
+
+      h4 {
+            color: $teal;
+            margin: 1em 0; 
+            text-align: center;
+      }
+
+      h5 {
+            color: $teal;
+            margin: 1em 0;
+            text-align: left;
+      }
+      
+      img {
+            @include images;
+            width: 95%;
+            margin: 1em auto;
+      }
+
+      p {
+            text-align: left;
+      }
+      
+} 
+
+/* -------------------------- Gallery Pages -------------------------- */
+.gallery {
+      width: 90%;
+      max-width: 80em;
+      margin: 1em auto;
+
+      img {
+            @include images;
+            width: 95%;
+            margin-top: 2em;
+            max-height: 600px;
+      }
+}
+
+.liveLink {
+      width: 90%;
+      margin: 0 auto 1.5em;
+      text-align: center;
+  }
+
+
+//lightbox display for websites and graphics pages
+
+#lightboxContainer {
+      padding: 1em;
+}
+    
+#modalWindow {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0,0,0,.8);
+      margin: 0 auto;
+      padding: 1.5em;
+      z-index: 5;
+      
+}
+    
+#modalWindow img {
+      padding: 1em;
+      background-color: black;
+      
+}
+
+#captionTxt {
+      text-align:center;
+}
+  
+
+#closeIcon {
+      position: absolute;
+      top: .25em;
+      right: .5em;
+      color: red;
+      display: none;
+      font-family: Verdana, sans-serif;
+      font-size: 32px; 
+      font-weight: 700;
+      z-index: 6;
+}
+

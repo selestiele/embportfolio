@@ -1,0 +1,17 @@
+// compiled SASS files for main.css file
+
+//normalize the CSS and reset all the base styles
+@import 'partials/_normalize';
+
+//import the fontAwesome files
+@import '../fonts/font-awesome-4.7.0/scss/font-awesome.scss';
+
+/* This is the start of the main stylesheet*/
+
+//import the layout stylesheets
+@import 'partials/_layout';
+@import 'partials/_gridstyles';
+
+
+
+
